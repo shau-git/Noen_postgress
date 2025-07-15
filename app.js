@@ -13,9 +13,10 @@ app.use('/users', userRoutes);
 
     // dont use if you already has the table in your db
     // await sequelize.sync(); // Optional: creates tables automatically (Create the table in the MSSQL database if it doesn’t exist)
-    app.listen(3001, () => console.log('Server started on port 3001'));
+    app.listen(3012, () => console.log('Server started on port 3012'));
   } catch (error) {
     console.error('Unable to connect to the database:', error);
+    process.exit(1); // Exit on database connection failure
   }
 })();
 

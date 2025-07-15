@@ -2,7 +2,7 @@ const {DataTypes} = require('sequelize')
 const sequelize = require('../db/db')
 
 
-const User = sequelize.define('Users', {
+const User = sequelize.define('users', {
     /*id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -27,7 +27,11 @@ const User = sequelize.define('Users', {
         }
     }
         */
-}, {timestamps: false });
+}, {timestamps: true } /*{
+  // Other model options go here
+  tableName: 'users', // Optional: specify table name, defaults to plural 'Users'
+  timestamps: true // Adds createdAt and updatedAt columns
+}*/);
 
 
 module.exports = User

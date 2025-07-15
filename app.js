@@ -23,3 +23,4 @@ app.use('/users', userRoutes);
 // It can also alter or drop tables if you use options like:
 // sequelize.sync({ alter: true }); // sync changes in model with DB
 // sequelize.sync({ force: true }); // WARNING: drops & recreates tables
+//

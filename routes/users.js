@@ -41,6 +41,11 @@ router.get('/', async (req, res) => {
     return res.status(200).json(users)
 })
 
+// GET simgle
+router.get('/:id', async (req, res) => {
+    const users = await User.findOne({where : {id: req.params.id}})
+    return res.status(200).json(users)
+})
 
 // DELETE
 router.delete('/:userId', async (req, res) => {

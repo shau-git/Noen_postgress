@@ -1,5 +1,5 @@
 {
-  "name": "Noen_postgress",
+  "name": "noen-postgres",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

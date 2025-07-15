@@ -1,6 +1,8 @@
 const express = require('express');
 const sequelize = require('./db/db');
 const userRoutes = require('./routes/users');
+require('dotenv').config(); // Load environment variables from .env file
+const PORT = process.env.PORT || 3012; // Use PORT from .env or default to 3012
 
 const app = express();
 app.use(express.json());
@@ -13,7 +15,7 @@ app.use('/users', userRoutes);
     console.log(new Date())
     // dont use if you already has the table in your db
     // await sequelize.sync(); // Optional: creates tables automatically (Create the table in the MSSQL database if it doesn’t exist)
-    app.listen(3012, () => console.log('Server started on port 3012') );
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`) );
   } catch (error) {
     console.error('Unable to connect to the database:', error);
     process.exit(1); // Exit on database connection failure

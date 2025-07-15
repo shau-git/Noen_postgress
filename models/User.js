@@ -27,11 +27,12 @@ const User = sequelize.define('users', {
         }
     }
         */
-}, {timestamps: true } /*{
+}, /*{timestamps: true } */{
   // Other model options go here
   tableName: 'users', // Optional: specify table name, defaults to plural 'Users'
-  timestamps: true // Adds createdAt and updatedAt columns
-}*/);
+  timestamps: true, // Adds createdAt and updatedAt columns
+  underscored: true 
+});
 
 
 module.exports = User
